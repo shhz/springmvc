@@ -41,7 +41,7 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:context-dispatcher.xml</param-value>
         </init-param>
-        <!-- 使系统在启动时装在servlet而不是第一个servlet被访问 -->
+        <!-- 使系统在启动时装载servlet而不是第一个servlet被访问 -->
         <load-on-startup>1</load-on-startup>
     </servlet>
 
