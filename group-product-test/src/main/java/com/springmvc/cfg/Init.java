@@ -3,22 +3,22 @@ package com.springmvc.cfg;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.springmvc.model.Jurisdiction;
-import com.springmvc.model.Middle_role_jurisdiction;
-import com.springmvc.model.Role;
-import com.springmvc.model.User;
+import com.springmvc.pojo.Jurisdiction;
+import com.springmvc.pojo.Middle_j_r;
+import com.springmvc.pojo.Role;
+import com.springmvc.pojo.User;
 
 public class Init {
 	public static User USER;
 	public static Role ROLE;
 	public static Jurisdiction JURISDICTION;
-	public static Middle_role_jurisdiction MIDDLE;
+	public static Middle_j_r MIDDLE;
 
 	public static void init() {
-		JURISDICTION = new Jurisdiction(0, "»®œﬁ1");
-		List<Middle_role_jurisdiction> list = new ArrayList<>();
-		ROLE = new Role(0, "π‹¿Ì‘±", list);
-		MIDDLE = new Middle_role_jurisdiction(0, ROLE, JURISDICTION);
+		JURISDICTION = new Jurisdiction(0, "ÊùÉÈôê1");
+		List<Middle_j_r> list = new ArrayList<>();
+		ROLE = new Role(0, "ÁÆ°ÁêÜÂëò", list);
+		MIDDLE = new Middle_j_r(0, ROLE, JURISDICTION);
 		list.add(MIDDLE);
 		ROLE.setList(list);
 		USER = new User(0, "system", "password", ROLE);

@@ -3,7 +3,7 @@ package com.springmvc.test;
 import java.util.Scanner;
 
 import com.springmvc.cfg.Init;
-import com.springmvc.model.User;
+import com.springmvc.pojo.User;
 
 public class Test {
 	public static void main(String[] args) {
@@ -12,24 +12,29 @@ public class Test {
 		User u = new User();
 		boolean flag = true;
 		while (flag) {
-			System.out.println("*****µÇÂ¼*****");
-			System.out.println("ÇëÊäÈëÓÃ»§Ãû");
+			System.out.println("*****ç™»å½•*****");
+			System.out.println("è¯·è¾“å…¥ç”¨æˆ·å");
 			u.setU_name(sc.next());
 			System.out.println("*************");
-			System.out.println("ÇëÊäÈëÃÜÂë");
+			System.out.println("è¯·è¾“å…¥å¯†ç ");
 			u.setU_pwd(sc.next());
+			System.out.println("*************");
 			if (!u.getU_name().equals(Init.USER.getU_name()) || !u.getU_pwd().equals(Init.USER.getU_pwd())) {
-				System.out.println("ÓÃ»§Ãû»òÃÜÂë´íÎó");
-				System.out.println("ÖØĞÂµÇÂ¼");
+				System.out.println("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯");
+				System.out.println("é‡æ–°ç™»é™†");
+				System.out.println("*************");
 			} else {
-				System.out.println("µÇÂ¼³É¹¦");
-				// ÅĞ¶Ï½ÇÉ«
-				if (u.getRole().equals(Init.ROLE)) {
-					System.out.println("ÄúÊÇ:" + Init.ROLE.getR_name());
+				System.out.println("ç™»é™†æˆåŠŸ");
+				System.out.println("*************");
+				// è§’è‰²
+				if (Init.USER.getRole().equals(Init.ROLE)) {
+					System.out.println("èº«ä»½:" + Init.ROLE.getR_name());
+					System.out.println("*************");
 				}
-				// ÅĞ¶ÏÈ¨ÏŞ
+				// æƒé™
 				if (Init.ROLE.getList().get(0).getJurisdiction().equals(Init.JURISDICTION)) {
-					System.out.println("È¨ÏŞÊÇ:" + Init.JURISDICTION.getJ_name());
+					System.out.println("æƒé™:" + Init.JURISDICTION.getJ_name());
+					System.out.println("*************");
 				}
 				flag = !flag;
 			}
